@@ -1,2 +1,5 @@
 1. A compute board does all of the heavy calculations for the drone (e.g. computer vision, calculating trajectories, etc.), while the flight controller receives and sends signals to and from all of the different sensors and parts on the drone.
-2. 
+2. The compute board is a Raspberry Pi that runs Linux. The controller uses NuttX, PX4, and uORB.
+3. They use MAVROS to communicate with each other.
+4. The IMU and altitude sensor (barometer/radar) signals are processed by the flight controller. The optical flow sensors, cameras, and GPS signals are processed by the computer.
+5. NuttX is an operating system for the Pixhawk flight controller. uORB and MAVLINK are messaging systems for the flight controller.
