@@ -1,0 +1,2 @@
+1. A compute board does all of the heavy calculations for the drone (e.g. computer vision, calculating trajectories, etc.), while the flight controller receives and sends signals to and from all of the different sensors and parts on the drone.
+2. 
