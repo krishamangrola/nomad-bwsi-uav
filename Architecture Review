@@ -1,0 +1,38 @@
+What are some of the difference between the a research and development drone vs other "commercial" or "toy" drones?
+The difference between a research and development vs a commercial  or toy drone is that research and development drones are designed for constant upgrading and development, while commercial and toy drones are finished products. Research and development drones provide much easier access to their software, while in commercial and toy drones, such software is either difficult or impossible to access and modify.
+
+What are some current applications of autonomous drones? Can you think of any future applications as technology improves (e.g. faster, smaller, more efficient computers)?
+Some uses include search and rescue machines and applications in defense. Autonomous drones can also be used to clean windows on tall buildings, saving humans the risk.
+
+Describe the difference between the Compute Board and Flight Controller. What purposes do each serve? What operating systems do each run?
+A compute board does all of the heavy calculations for the drone (e.g. computer vision, calculating trajectories, etc.), while the flight controller receives and sends signals to and from all of the different sensors and parts on the drone. The computer board uses Linux. The Flight Controller uses NuttX.
+
+Which communication architecture are we using to connect are computers to the drone: Peer2Peer or centralized? What about the remote control - drone communication?
+We are using Peer 2 Peer communication to connect the computer to the drone; however, we will use centralized communication between the remote control and drone.
+
+True or False: For manual flight control, the remote control communicates with the drone over wifi.
+FALSE: Remote controllers act as radio transmitters to communicate with drones during manual flights by sending radio signals to the drone’s receiver. 
+
+In order to know where the drone is in the world, it needs some form of positioning sensor/algorithms, otherwise it would be flying blind. What are the different types of positioning sensors available? Which do you think we are going to use during the class?
+Some types of positioning sensors are accelerometers, gyroscopes, GPS, barometers, etc. I think we will be using an IMU with an accelerometer, gyroscope, GPS, and barometer, along with a camera. 
+
+True or False: during our indoor flights, we can use the GPS sensor to estimate the drone's position in the world.
+True, but GPS measurements are not very reliable indoors and it would be much better to use different sensors such as optical flow to estimate the drone’s position.
+
+Are optical flow algorithms responsible for mapping the environment? If not, can you describe conceptually what optical flow does?
+No, they don’t map the environment. Optical flow uses the movement of the camera and brightness patterns to estimate the change in position of the drone. It can then use this information to estimate the drone’s velocity and position.
+
+Which potential sensors on a Drone enables 3D visual mapping?
+Intel RealSense Sensors, it is a LiDAR camera which produces 3D images by using multiple cameras 
+
+How does the Compute Board communicate with the Flight Controller?
+They use MAVROS to communicate with each other. ROS2 allows the flow of data and information between both nodes, enabling more complex robotic applications and better communication.
+
+What is PX4 and where is it running on the drone?
+The PX4 stands for PixHawk 4, and is the flight controller for the drone. It controls the drone’s movement to provide altitude control, stability, horizontal motion, and rotation.
+
+Which of these best describes MAVLink: 1. an operating system used on the drone, 2. a sensor on the drone, 3. a communication protocol on the drone, 4. a programming language
+3
+
+If I want to write a new, complex computer vision algorithm for the drone, should I add it to the Flight Controller firmware? if not, where should I add it and why?
+Complex algorithms should be added to the companion computer (for ex. Raspberry pie) as that is the part of the drone that handles difficult calculations and decision making. The pie is also where Linex is run. 
