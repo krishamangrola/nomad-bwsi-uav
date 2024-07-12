@@ -1,0 +1,32 @@
+1. What are AR tags and how do they function in augmented reality applications?
+Small images that act as reference points in AR, they are similar to QR code squares and can be used to estimate position and orientation in relation to a camera. In augmented reality applications, they can be used to trigger events and responses from the system.
+
+2. How do AR tags differ from QR codes and traditional barcodes in terms of technology and application?
+QR codes and traditional barcodes are mostly for information retrieval, and simply store contact information, URLs, or numerical data. On the other hand, AR tags serve as reference points in the real world that allow virtual objects to be tracked in a physical space.
+
+3. What are the common use cases for AR tags in various industries, such as retail, education, and manufacturing?
+AR tags are used in retail and manufacturing as product labels and to keep track of objects, similar to barcodes.
+
+4. How do AR tags facilitate object recognition and tracking in augmented reality environments?
+First is tag recognition and camera detection, where an AR-enabled device scans the area through its camera looking for these AR tags. Once the AR tag is scanned the device identifies the pattern using CV algorithms. Based on the recognized pattern, the AR system determines the position and orientation of the tag in 3D space relative to the camera orientation. With the known position the AR system creates a coordinate system which helps place virtual objects accurately in relation to the real-world. AR tags facilitate a stable reference point.
+
+5. What are the key technical specifications and requirements for creating and using AR tags?
+To create an AR tag, you need to have access to a library such as the ArUco library, which is used to detect and generate AR tags. In addition, you need CV2 and NumPy. In order to process data from the AR tag, you need to have:
+- The dimensions of the AR tag
+- The location of the AR tag in the environment
+- Specifications for a head-on view of the AR tag
+
+6. What software tools and libraries are commonly used for generating and reading AR tags?
+OpenCV is often used for detecting and decodes AR tags, along with ARCore, Vuforia, and the ArUco library.
+
+7. How do lighting conditions and physical obstructions affect the performance of AR tags?
+Lighting conditions and physical obstructions can greatly affect the performance of AR tags if the obstruction or lighting difference is extreme. It can cause the system to calculate incorrect data from the tag, which may result in compounding errors for position and orientation.
+
+8. What are the security and privacy considerations when using AR tags in public or sensitive environments?
+One security concerning AR tags is that they can be used to gain unauthorized access to secure information. Another concern is that scanning AR tags requires taking recordings from cameras, which may capture unwilling bystanders when done in public.
+
+9. Can AR tags be customized or branded, and how does this affect their readability and effectiveness?
+AR tags can be customized and/or branded; customizing them can make them more easily detected by certain cameras, improving readability. Branding on AR tags can also make them more recognizable and valuable to people using them.
+
+10. What are the future trends and developments in AR tag technology and its integration with other emerging technologies like AI and IoT? 
+Advancements in AI and IoT can fuel more adaptive AR technology, with live adjustments and corrections, based on user surroundings. Another example of integration with these emerging technologies is how AR tags can foster the spread of data between IoTs.
